@@ -45,13 +45,13 @@ const Work = () => {
             textTransform: 'uppercase',
             letterSpacing: '1px'
           }}>
-            Our Work
+            Selected Work (Showcase)
           </div>
           <h2 className="display-md" style={{ marginBottom: '16px' }}>
-            Featured Case Studies
+            Featured Project Showcases
           </h2>
           <p className="body-lg">
-            Real projects, real results. See how we've helped businesses transform their ideas into successful digital products.
+            Concept and demo projects that highlight our capabilities across web, mobile, and AI solutions.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ const Work = () => {
           border: '1px solid var(--border-subtle)'
         }}>
           <p className="body-sm" style={{ color: 'var(--text-muted)' }}>
-            Note: These are sample case studies for demonstration purposes
+            Note: These are showcase examples for demonstration purposes only.
           </p>
         </div>
 

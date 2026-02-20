@@ -75,7 +75,7 @@ const Services = () => {
             <span className="text-gradient">With Our Services</span>
           </h2>
           <p className="body-lg">
-            Outcome-focused solutions. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+            Outcome-focused solutions tailored to your business goals, delivered with clear timelines and measurable impact.
           </p>
         </div>
 

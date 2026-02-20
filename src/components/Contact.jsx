@@ -127,23 +127,35 @@ const Contact = () => {
               gap: '24px'
             }}>
               {/* Email */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: '16px',
-                padding: '20px',
-                background: 'var(--bg-secondary)',
-                borderRadius: '12px',
-                border: '1px solid var(--border-subtle)',
-                transition: 'all 0.2s ease',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'var(--accent-primary)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
-              }}>
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => {
+                  window.open('https://mail.google.com/mail/?view=cm&to=hr@dorara.tech', '_blank', 'noopener,noreferrer');
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('https://mail.google.com/mail/?view=cm&to=hr@dorara.tech', '_blank', 'noopener,noreferrer');
+                  }
+                }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '16px',
+                  padding: '20px',
+                  background: 'var(--bg-secondary)',
+                  borderRadius: '12px',
+                  border: '1px solid var(--border-subtle)',
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                }}
+              >
                 <div style={{
                   width: '40px',
                   height: '40px',
@@ -158,12 +170,24 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="body-sm" style={{ marginBottom: '4px' }}>Email</div>
-                  <div className="h3">hello@Dorara.com</div>
+                  <div className="h3">
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&to=hr@dorara.tech"
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      hr@dorara.tech
+                    </a>
+                  </div>
                 </div>
               </div>
 
               {/* Phone */}
-              <div style={{
+              <a
+                href="tel:+918468087211"
+                style={{
                 display: 'flex',
                 alignItems: 'flex-start',
                 gap: '16px',
@@ -172,14 +196,17 @@ const Contact = () => {
                 borderRadius: '12px',
                 border: '1px solid var(--border-subtle)',
                 transition: 'all 0.2s ease',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'var(--accent-primary)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
-              }}>
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'inherit'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                }}
+              >
                 <div style={{
                   width: '40px',
                   height: '40px',
@@ -194,12 +221,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="body-sm" style={{ marginBottom: '4px' }}>Phone</div>
-                  <div className="h3">+1 (555) 123-4567</div>
+                  <div className="h3">+91 8468087211</div>
                 </div>
-              </div>
+              </a>
 
               {/* WhatsApp */}
-              <div style={{
+              <a
+                href="https://wa.me/918468087211"
+                style={{
                 display: 'flex',
                 alignItems: 'flex-start',
                 gap: '16px',
@@ -208,14 +237,17 @@ const Contact = () => {
                 borderRadius: '12px',
                 border: '1px solid var(--border-subtle)',
                 transition: 'all 0.2s ease',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'var(--accent-primary)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
-              }}>
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'inherit'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                }}
+              >
                 <div style={{
                   width: '40px',
                   height: '40px',
@@ -230,9 +262,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="body-sm" style={{ marginBottom: '4px' }}>WhatsApp</div>
-                  <div className="h3">+1 (555) 987-6543</div>
+                  <div className="h3">+91 8468087211</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -314,7 +346,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="input-field"
-                    placeholder="your@email.com"
+                    placeholder="hr@dorara.tech"
                   />
                   {errors.email && (
                     <div style={{ 
@@ -341,7 +373,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="input-field"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 8468087211"
                   />
                   {errors.phone && (
                     <div style={{ 

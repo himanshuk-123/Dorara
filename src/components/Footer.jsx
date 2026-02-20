@@ -49,15 +49,17 @@ const Footer = () => {
               gap: '12px'
             }}>
               {[
-                { icon: Github, label: 'GitHub' },
-                { icon: Linkedin, label: 'LinkedIn' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Mail, label: 'Email' }
+                { icon: Github, label: 'GitHub', href: 'https://github.com' },
+                { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com' },
+                { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
+                { icon: Mail, label: 'Email', href: 'https://mail.google.com/mail/?view=cm&to=hr@dorara.tech' }
               ].map((social, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href={social.href}
                   aria-label={social.label}
+                  target={social.href.startsWith('http') ? '_blank' : undefined}
+                  rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                   style={{
                     width: '40px',
                     height: '40px',
@@ -191,16 +193,40 @@ const Footer = () => {
               gap: '12px'
             }}>
               <li className="body-md">
-                <strong>Email:</strong><br />
-                hello@Dorara.com
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=hr@dorara.tech"
+                  aria-label="Email hr@dorara.tech"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    flexDirection: 'column',
+                    gap: '4px'
+                  }}
+                >
+                  <strong>Email:</strong>
+                  <span>hr@dorara.tech</span>
+                </a>
               </li>
               <li className="body-md">
                 <strong>Phone:</strong><br />
-                +1 (555) 123-4567
+                <a
+                  href="tel:+918468087211"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  +91 8468087211
+                </a>
               </li>
               <li className="body-md">
                 <strong>WhatsApp:</strong><br />
-                +1 (555) 987-6543
+                <a
+                  href="https://wa.me/918468087211"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  +91 8468087211
+                </a>
               </li>
             </ul>
           </div>
