@@ -1,0 +1,483 @@
+/* Astra-Inspired Teal Gradient System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Dark Theme Base */
+  --bg-primary: rgb(10, 17, 20);
+  --bg-secondary: rgb(15, 23, 27);
+  --bg-tertiary: rgb(20, 30, 35);
+  
+  /* Text Hierarchy */
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(218, 218, 218);
+  --text-muted: rgb(148, 163, 169);
+  
+  /* Border System */
+  --border-primary: rgb(40, 55, 60);
+  --border-subtle: rgba(16, 185, 129, 0.15);
+  
+  /* Teal/Emerald Accent System */
+  --accent-primary: rgb(16, 185, 129);
+  --accent-secondary: rgb(20, 184, 166);
+  --accent-hover: rgb(5, 150, 105);
+  --accent-pressed: rgb(4, 120, 87);
+  --accent-light: rgb(52, 211, 153);
+  --accent-bg: rgba(16, 185, 129, 0.1);
+  
+  /* Gradient System */
+  --gradient-primary: linear-gradient(135deg, rgb(6, 78, 59) 0%, rgb(16, 185, 129) 50%, rgb(52, 211, 153) 100%);
+  --gradient-secondary: linear-gradient(135deg, rgb(20, 184, 166) 0%, rgb(16, 185, 129) 100%);
+  --gradient-dark: linear-gradient(135deg, rgb(10, 17, 20) 0%, rgb(6, 78, 59) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2), transparent 70%);
+  
+  /* Responsive Spacing */
+  --section-padding-mobile: 48px 0;
+  --section-padding-tablet: 80px 0;
+  --section-padding-desktop: 120px 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* ==================== RESPONSIVE TYPOGRAPHY SCALE ==================== */
+
+/* Display Large - Hero Headlines */
+.display-lg {
+  font-size: clamp(32px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+/* Display Medium - Section Headlines */
+.display-md {
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Display Small */
+.display-sm {
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+/* Heading 1 */
+.h1 {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+/* Heading 2 */
+.h2 {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+
+/* Heading 3 */
+.h3 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+/* Body Large */
+.body-lg {
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  color: var(--text-secondary);
+}
+
+/* Body Medium */
+.body-md {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+  color: var(--text-secondary);
+}
+
+/* Body Small */
+.body-sm {
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+}
+
+/* Primary Button - Teal Gradient CTA */
+.btn-primary {
+  background: var(--gradient-secondary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 12px;
+  padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 52px;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button - Outline Style */
+.btn-secondary {
+  background: rgba(16, 185, 129, 0.05);
+  color: var(--text-primary);
+  border: 2px solid var(--accent-primary);
+  border-radius: 12px;
+  padding: clamp(12px, 2vw, 14px) clamp(22px, 4vw, 30px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  background: rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 8px;
+  padding: clamp(10px, 1.5vw, 12px) clamp(16px, 3vw, 24px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  background: var(--bg-tertiary);
+  transform: translateY(0);
+}
+
+/* Feature Card - Astra Style */
+.feature-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: clamp(20px, 5vw, 32px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-glow);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.2);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Input Field */
+.input-field {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-primary);
+  border-radius: 12px;
+  padding: clamp(12px, 2vw, 16px) clamp(14px, 2vw, 20px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(218, 255, 1, 0.1);
+}
+
+textarea.input-field {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Container System */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5vw, 24px);
+}
+
+/* Grid System */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+}
+
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+}
+
+@media (min-width: 768px) {
+  .card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Mobile - Extra Small (320px - 480px) */
+@media (max-width: 480px) {
+  .gradient-card {
+    padding: clamp(40px, 10vw, 60px) clamp(20px, 5vw, 40px);
+    border-radius: 16px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 4vw, 16px);
+  }
+  
+  .feature-card {
+    padding: clamp(16px, 4vw, 20px);
+  }
+}
+
+/* Mobile - Small (481px - 767px) */
+@media (max-width: 767px) {
+  .gradient-card {
+    padding: clamp(48px, 12vw, 64px) clamp(24px, 6vw, 48px);
+    border-radius: 18px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+  
+  .card-grid,
+  .card-grid-3 {
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 4vw, 16px);
+  }
+  
+  .feature-card {
+    padding: clamp(18px, 5vw, 24px);
+  }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gradient-card {
+    padding: clamp(60px, 10vw, 80px) clamp(40px, 8vw, 60px);
+  }
+  
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-card {
+    padding: clamp(24px, 5vw, 28px);
+  }
+}
+
+/* Desktop - Large (1024px+) */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+/* Extra Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .display-lg {
+    font-size: 72px;
+  }
+  
+  .display-md {
+    font-size: 56px;
+  }
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.floating-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ==================== GRADIENT & TEXT UTILITIES ==================== */
+
+.gradient-card {
+  background: var(--gradient-primary);
+  border-radius: 24px;
+  padding: clamp(48px, 10vw, 80px) clamp(32px, 6vw, 60px);
+  position: relative;
+  overflow: hidden;
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.text-gradient {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==================== SPACING UTILITIES ==================== */
+
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-48 { margin-top: 48px; }
+.mt-64 { margin-top: 64px; }
+
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-48 { margin-bottom: 48px; }
+.mb-64 { margin-bottom: 64px; }
+
+/* Responsive margins for sections */
+@media (max-width: 767px) {
+  .mt-64 { margin-top: 32px; }
+  .mb-64 { margin-bottom: 32px; }
+  .mt-48 { margin-top: 24px; }
+  .mb-48 { margin-bottom: 24px; }
+}
