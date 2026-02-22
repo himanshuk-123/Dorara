@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
+  // TODO: Replace with your Formspree Form ID from https://formspree.io
+  // After creating account, get your Form ID and replace below
+  // Use only the ID part, like: 'mbdaprwv' (not the full URL)
+  const FORMSPREE_FORM_ID = 'mbdaprwv';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,6 +18,8 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validateForm = () => {
     const newErrors = {};
@@ -39,25 +46,55 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (validateForm()) {
-      // Frontend only - just show success message
-      setIsSubmitted(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          service: 'web-development',
-          message: ''
-        });
-        setIsSubmitted(false);
-      }, 3000);
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsLoading(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            company: '',
+            service: 'web-development',
+            message: ''
+          });
+          setIsSubmitted(false);
+        }, 3000);
+      } else {
+        setSubmitError('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitError('An error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -454,9 +491,28 @@ const Contact = () => {
                   )}
                 </div>
 
-                <button type="submit" className="btn-primary" style={{ width: '100%' }}>
+                {submitError && (
+                  <div style={{ 
+                    background: 'rgba(255, 68, 68, 0.1)',
+                    border: '1px solid rgba(255, 68, 68, 0.3)',
+                    color: '#ff4444', 
+                    padding: '12px 16px',
+                    borderRadius: '8px',
+                    marginBottom: '24px',
+                    fontSize: '14px'
+                  }}>
+                    {submitError}
+                  </div>
+                )}
+
+                <button 
+                  type="submit" 
+                  className="btn-primary" 
+                  style={{ width: '100%', opacity: isLoading ? 0.6 : 1 }}
+                  disabled={isLoading}
+                >
                   <Send size={20} />
-                  Send Message
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             )}
