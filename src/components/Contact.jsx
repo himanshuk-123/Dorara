@@ -131,11 +131,11 @@ const Contact = () => {
                 role="button"
                 tabIndex={0}
                 onClick={() => {
-                  window.open('https://mail.google.com/mail/?view=cm&to=hr@dorara.tech', '_blank', 'noopener,noreferrer');
+                  window.open('https://mail.google.com/mail/?view=cm&to=info@dorara.tech', '_blank', 'noopener,noreferrer');
                 }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
-                    window.open('https://mail.google.com/mail/?view=cm&to=hr@dorara.tech', '_blank', 'noopener,noreferrer');
+                    window.open('https://mail.google.com/mail/?view=cm&to=info@dorara.tech', '_blank', 'noopener,noreferrer');
                   }
                 }}
                 style={{
@@ -172,13 +172,13 @@ const Contact = () => {
                   <div className="body-sm" style={{ marginBottom: '4px' }}>Email</div>
                   <div className="h3">
                     <a
-                      href="https://mail.google.com/mail/?view=cm&to=hr@dorara.tech"
+                      href="https://mail.google.com/mail/?view=cm&to=info@dorara.tech"
                       target="_blank"
                       rel="noreferrer"
                       style={{ color: 'inherit', textDecoration: 'none' }}
                       onClick={(e) => e.stopPropagation()}
                     >
-                      hr@dorara.tech
+                      info@dorara.tech
                     </a>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="input-field"
-                    placeholder="hr@dorara.tech"
+                    placeholder="info@dorara.tech"
                   />
                   {errors.email && (
                     <div style={{ 

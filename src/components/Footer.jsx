@@ -52,7 +52,7 @@ const Footer = () => {
                 { icon: Github, label: 'GitHub', href: 'https://github.com' },
                 { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com' },
                 { icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
-                { icon: Mail, label: 'Email', href: 'https://mail.google.com/mail/?view=cm&to=hr@dorara.tech' }
+                { icon: Mail, label: 'Email', href: 'https://mail.google.com/mail/?view=cm&to=info@dorara.tech' }
               ].map((social, index) => (
                 <a
                   key={index}
@@ -194,8 +194,8 @@ const Footer = () => {
             }}>
               <li className="body-md">
                 <a
-                  href="https://mail.google.com/mail/?view=cm&to=hr@dorara.tech"
-                  aria-label="Email hr@dorara.tech"
+                  href="https://mail.google.com/mail/?view=cm&to=info@dorara.tech"
+                  aria-label="Email info@dorara.tech"
                   target="_blank"
                   rel="noreferrer"
                   style={{
@@ -207,7 +207,7 @@ const Footer = () => {
                   }}
                 >
                   <strong>Email:</strong>
-                  <span>hr@dorara.tech</span>
+                  <span>info@dorara.tech</span>
                 </a>
               </li>
               <li className="body-md">
