@@ -140,7 +140,7 @@ const Work = () => {
                 </div>
 
                 {/* View Case Study Link */}
-                <div style={{
+                {/* <div style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
@@ -157,7 +157,7 @@ const Work = () => {
                 }}>
                   View Case Study
                   <ArrowRight size={16} />
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
