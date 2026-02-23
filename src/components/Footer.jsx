@@ -222,10 +222,10 @@ const Footer = () => {
               <li className="body-md">
                 <strong>WhatsApp:</strong><br />
                 <a
-                  href="https://wa.me/918468087211"
+                  href="https://wa.me/919664230585"
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
-                  +91 8468087211
+                  +91 9664230585
                 </a>
               </li>
             </ul>

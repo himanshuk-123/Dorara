@@ -299,7 +299,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="body-sm" style={{ marginBottom: '4px' }}>WhatsApp</div>
-                  <div className="h3">+91 8468087211</div>
+                  <div className="h3">+91 9664230585</div>
                 </div>
               </a>
             </div>
