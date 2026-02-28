@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png';
+import logo from '../dorara-animated.svg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ const Navigation = () => {
           <img
             src={logo}
             alt="Dorara logo"
-            style={{ height: '250px', width: 'auto', display: 'block' }}
+            style={{ height: '48px', width: 'auto', display: 'block' }}
           />
         </div>
 

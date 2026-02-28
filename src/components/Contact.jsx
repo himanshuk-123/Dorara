@@ -264,7 +264,7 @@ const Contact = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/918468087211"
+                href="https://wa.me/9664230585"
                 style={{
                 display: 'flex',
                 alignItems: 'flex-start',
