@@ -79,7 +79,9 @@ const Work = () => {
               }}>
                 <img 
                   src={project.image} 
-                  alt={project.title}
+                  alt={`${project.title} - ${project.category} by Dorara`}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',

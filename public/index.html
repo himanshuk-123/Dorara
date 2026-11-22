@@ -3,14 +3,133 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="dorara.tech - Enterprise Software & AI Solutions That Scale. Custom web & mobile apps, intelligent AI agents, and data-driven solutions." />
+        <meta name="theme-color" content="#0a1114" />
+        
+        <!-- Primary Meta Tags -->
+        <title>Dorara | Enterprise Software &amp; AI Solutions</title>
+        <meta name="title" content="Dorara | Enterprise Software &amp; AI Solutions" />
+        <meta name="description" content="Dorara delivers scalable enterprise software, intelligent AI agents, custom web and mobile apps, and UI/UX design. Powering digital transformation for forward-thinking businesses." />
+        <meta name="keywords" content="Dorara, dorara.tech, enterprise software development, AI solutions, AI agents, custom web development, mobile app development, UI UX design, LLM automation, software agency" />
+        <meta name="author" content="Dorara" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://dorara.tech/" />
+
+        <!-- Open Graph / Facebook / LinkedIn -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dorara.tech/" />
+        <meta property="og:site_name" content="Dorara" />
+        <meta property="og:title" content="Dorara | Enterprise Software &amp; AI Solutions" />
+        <meta property="og:description" content="Dorara delivers scalable enterprise software, intelligent AI agents, custom web and mobile apps, and UI/UX design. Powering digital transformation for forward-thinking businesses." />
+        <meta property="og:image" content="https://dorara.tech/dorara-animated.svg" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://dorara.tech/" />
+        <meta name="twitter:title" content="Dorara | Enterprise Software &amp; AI Solutions" />
+        <meta name="twitter:description" content="Dorara delivers scalable enterprise software, intelligent AI agents, custom web and mobile apps, and UI/UX design." />
+        <meta name="twitter:image" content="https://dorara.tech/dorara-animated.svg" />
+
         <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/dorara-animated.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        <title>Dorara | Enterprise Software & AI Solutions</title>
+        <!-- Structured Data (JSON-LD) for Google Search -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://dorara.tech/#organization",
+              "name": "Dorara",
+              "url": "https://dorara.tech",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://dorara.tech/dorara-animated.svg"
+              },
+              "description": "Enterprise software, custom web and mobile apps, and intelligent AI automation solutions.",
+              "email": "info@dorara.tech",
+              "telephone": "+918468087211",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+918468087211",
+                "contactType": "customer service",
+                "email": "info@dorara.tech",
+                "availableLanguage": ["English", "Hindi"]
+              },
+              "sameAs": [
+                "https://github.com",
+                "https://www.linkedin.com",
+                "https://twitter.com"
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://dorara.tech/#website",
+              "url": "https://dorara.tech/",
+              "name": "Dorara",
+              "publisher": {
+                "@id": "https://dorara.tech/#organization"
+              }
+            },
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://dorara.tech/#service",
+              "name": "Dorara Enterprise Software & AI Solutions",
+              "url": "https://dorara.tech",
+              "provider": {
+                "@id": "https://dorara.tech/#organization"
+              },
+              "priceRange": "$$",
+              "description": "Custom enterprise software development, intelligent AI agents, mobile applications, and UI/UX design.",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Software Engineering & AI Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Web Development",
+                      "description": "High-performance web applications with clean architecture using React, Next.js, and Node.js."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Mobile App Development",
+                      "description": "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI & Automation",
+                      "description": "Intelligent AI agents, LLM integrations, and automated workflows using OpenAI and LangChain."
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "UI/UX Design",
+                      "description": "Intuitive, high-converting product interfaces and scalable design systems created in Figma."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+        </script>
+
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
         <!--
@@ -38,7 +157,25 @@
         </script>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <!-- Semantic fallback for crawlers & non-JS clients -->
+        <noscript>
+            <div style="font-family: sans-serif; padding: 40px; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                <h1>Dorara | Enterprise Software &amp; AI Solutions That Scale</h1>
+                <p>Welcome to Dorara (dorara.tech). We are a modern technology partner providing enterprise-grade software development, intelligent AI agents, custom web and mobile applications, and high-impact UI/UX design.</p>
+                
+                <h2>Our Core Services</h2>
+                <ul>
+                    <li><strong>Custom Web Development:</strong> High-performance, scalable web apps built with React, Next.js, Node.js, and TypeScript.</li>
+                    <li><strong>Mobile App Development:</strong> Native and cross-platform apps for iOS and Android using React Native and Flutter.</li>
+                    <li><strong>AI &amp; Automation:</strong> Custom AI agents, LLM integrations, OpenAI, LangChain, and automated workflow pipelines.</li>
+                    <li><strong>UI/UX Design:</strong> Scalable design systems, interactive prototypes, and intuitive digital experiences in Figma.</li>
+                </ul>
+
+                <h2>Contact Us</h2>
+                <p>Ready to build or scale your product? Contact our engineering team at <a href="mailto:info@dorara.tech">info@dorara.tech</a> or visit <a href="https://dorara.tech">dorara.tech</a> with JavaScript enabled.</p>
+            </div>
+        </noscript>
+        
         <div id="root"></div>
   
         <script>

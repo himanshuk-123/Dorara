@@ -129,7 +129,7 @@ const Hero = () => {
                 color: 'var(--accent-primary)', 
                 fontWeight: 600
               }}>
-                Powering Digital Transformation
+                Dorara • Enterprise Software &amp; AI Agency
               </span>
             </div>
 
@@ -139,7 +139,7 @@ const Hero = () => {
               color: '#fff',
               lineHeight: '1.1'
             }}>
-              Ship Better Products, <span style={{ color: 'var(--accent-primary)' }}>Faster</span>
+              Ship Scalable Software &amp; AI Products, <span style={{ color: 'var(--accent-primary)' }}>Faster</span>
             </h1>
 
             {/* Subtext */}
@@ -148,7 +148,7 @@ const Hero = () => {
               color: 'rgba(255, 255, 255, 0.85)',
               lineHeight: '1.7'
             }}>
-              We build custom web and mobile applications, AI solutions, and digital products that solve real problems. Let us handle the complexity while you focus on growing your business.
+              Dorara engineers custom web applications, native mobile apps, and intelligent AI automation agents that scale. Let our team handle end-to-end technical complexity while you focus on business growth.
             </p>
 
             {/* CTA Buttons */}

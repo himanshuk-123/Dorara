@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dorara.tech
+
+# Sitemaps
+Sitemap: https://dorara.tech/sitemap.xml

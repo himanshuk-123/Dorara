@@ -61,7 +61,7 @@ const Navigation = () => {
           {/* <span style={{ color: 'var(--accent-primary)' }}>Dorara</span> */}
           <img
             src={logo}
-            alt="Dorara logo"
+            alt="Dorara - Enterprise Software &amp; AI Solutions"
             style={{ height: '48px', width: 'auto', display: 'block' }}
           />
         </div>
